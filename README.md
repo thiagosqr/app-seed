@@ -83,6 +83,6 @@
   Using Jersey is realy handy to map how responses should be created once exception occurs. 
   An example is [EmptyResultDataAccessExceptionMapper](https://github.com/thiagosqr/app-seed/blob/master/app-web/src/main/java/com/github/thiagosqr/conf/mappers/EmptyResultDataAccessExceptionMapper.java) which maps 404 responses when data isn't found by Spring Data.    
 
-###What isn't covered?
+##What isn't covered?
  Authentication and authorization, unit testing*, caching and entities relationships,    
  * Maven supports Junit Unit testing by default 
