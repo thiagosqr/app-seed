@@ -1,6 +1,6 @@
 # app-seed
  <hr>
- ##Web Application Seed using Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, Websocket, CSRF, Selenium, Jersey2, Servlet3, JBossEAP, Bootstrap, Bower, JQuery, I18n, SB Admin 2
+ ##Web Application Seed development ready, using Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, Websocket, CSRF, Selenium, Jersey2, Servlet3, JBossEAP, Bootstrap, Bower, JQuery, I18n, SB Admin 2
  
  
 ##CQRS Controllers
@@ -48,7 +48,7 @@
  
  Eg. 
  ```html
-    &lt;a href=&quot;#&quot; csrf:token_for=&quot;data-href&quot; th:attr=&quot;data-href=${it.id+'/delete'}&quot; data-th-text=&quot;#{delete.button.label}&quot; data-toggle=&quot;modal&quot; data-target=&quot;#confirm-delete&quot;&gt;delete&lt;/a&gt;
+    <a href="#" csrf:token_for="data-href" th:attr="data-href=${it.id+'/delete'}" data-th-text="#{delete.button.label}" class="btn btn-outline btn-danger" data-toggle="modal" data-target="#confirm-delete">delete</a>
  ```
 ##WebSocket
  Atmosphere framework was the choice for Websocket once it has good support for Servlet, Jersey and other frameworks.
@@ -68,10 +68,13 @@
   We use surefile maven plugin in order to run unit,functional and integration tests during a maven build.
   The plugins star jetty, run h2, apply DDL, start the app, start browser and automatically test a feature to generate test results.
   The whole thing is done using random ports to make it easy running on Jenkins/Hudson CI.
-  To run integration tests run: mvn verify
-     
+  To run integration tests run:
+   ```
+   mvn verify
+   ```
+        
 ##Application Server Support
-  Currently supporting JBoss EAP 6+ and Wyldfly 9. Check out maven profiles while biulding    
+  Currently supporting JBoss EAP 6+ and Wyldfly 9. Check out maven profiles while building      
     
 ##Extending Jersey Bean Validation Support
   Additional Validations can be used on client request with an Annotation for key and implementation added to class [Validations](https://github.com/thiagosqr/app-seed/blob/master/app-web/src/main/java/com/github/thiagosqr/conf/validation/Validations.java)
