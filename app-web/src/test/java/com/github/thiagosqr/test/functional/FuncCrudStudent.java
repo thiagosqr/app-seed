@@ -24,8 +24,8 @@ import static org.junit.Assert.fail;
         format = {
                 "pretty",
                 "html:target/cucumber",
-                "json:target_json/cucumber.json",
-                "junit:taget_junit/cucumber.xml"
+                "json:target/targer_json/cucumber.json",
+                "junit:target/targer_junit/cucumber.xml"
         }
 )
 public class FuncCrudStudent implements En {
