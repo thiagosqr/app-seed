@@ -19,13 +19,6 @@
 
 package com.github.thiagosqr.conf.excecao;
 
-/**
- * <p><b>InfraException</b></p>
- * Classe que representa a Exceção genérica que não esta prevista no escopo do sistema.
- *
- * @author Marcos Fernando Costa.
- * @see Exception
- */
 public class InfraException extends Exception {
     private static final long serialVersionUID = -6472789855877680893L;
 

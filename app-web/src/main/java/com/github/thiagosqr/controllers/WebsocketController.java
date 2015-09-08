@@ -26,12 +26,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-/**
- * <b>Título:</b> WebsocketController
- * <br><b>Descrição:</b> Controller exemplo de websocket
- * <br><b>Copyright:</b> Copyright(c) 2015
- * <br><b>Empresa:</b> SEGPLAN
- */
 @Path("/")
 @AtmosphereService(
         dispatch = true,
