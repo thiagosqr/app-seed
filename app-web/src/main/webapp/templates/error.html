@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="description" content="HTML 5 CSS 3"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<title>Consultar</title>
+		<link rel="stylesheet" href="../css/style.css"  th:href="@{/css/style.css}"/>
+		<script src="../js/libs/modernizr-2.0.6.min.js" th:src="@{/js/libs/modernizr-2.0.6.min.js}"></script>
+	</head>
+	<body>
+		<p>Erro:</p>
+		<p th:text="${it}">message</p>
+	</body>
+</html>

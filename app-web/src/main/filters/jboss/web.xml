@@ -1,0 +1,115 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+    <param-name>resteasy.scan</param-name>
+    <param-value>false</param-value>
+  </context-param>
+  <context-param>
+    <param-name>resteasy.scan.providers</param-name>
+    <param-value>false</param-value>
+  </context-param>
+  <context-param>
+    <param-name>resteasy.scan.resources</param-name>
+    <param-value>false</param-value>
+  </context-param>
+
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+
+  <listener>
+    <listener-class>org.owasp.csrfguard.CsrfGuardServletContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.owasp.csrfguard.CsrfGuardHttpSessionListener</listener-class>
+  </listener>
+
+  <context-param>
+    <param-name>Owasp.CsrfGuard.Config</param-name>
+    <param-value>Owasp.CsrfGuard.properties</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Owasp.CsrfGuard.Config.Print</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>WebApp</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <async-supported>true</async-supported>
+    <init-param>
+      <param-name>javax.ws.rs.Application</param-name>
+      <param-value>com.github.thiagosqr.conf.WebApp</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>JavaScriptServlet</servlet-name>
+    <servlet-class>org.owasp.csrfguard.servlet.JavaScriptServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>AtmosphereServlet</description>
+    <servlet-name>AtmosphereServlet</servlet-name>
+    <servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class>
+
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>gov.goias.sistema.controllers</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>org.atmosphere.websocket.messageContentType</param-name>
+      <param-value>application/json</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>org.atmosphere.cpr.AtmosphereFramework.analytics</param-name>
+      <param-value>false</param-value>
+    </init-param>
+
+    <async-supported>true</async-supported>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+
+  <filter>
+    <filter-name>CSRFGuard</filter-name>
+    <filter-class>org.owasp.csrfguard.CsrfGuardFilter</filter-class>
+    <async-supported>true</async-supported>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>CSRFGuard</filter-name>
+    <url-pattern>/app/*</url-pattern>
+  </filter-mapping>
+
+  <servlet-mapping>
+    <servlet-name>WebApp</servlet-name>
+    <url-pattern>/app/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>JavaScriptServlet</servlet-name>
+    <url-pattern>/JavaScriptServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AtmosphereServlet</servlet-name>
+    <url-pattern>/broadcast/*</url-pattern>
+  </servlet-mapping>
+
+</web-app>
