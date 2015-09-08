@@ -70,3 +70,10 @@
      
 ##Application Server Support
   Currently supporting JBoss EAP 6+ and Wyldfly 9. Check out maven profiles while biulding    
+    
+##Extending Jersey Bean Validation Support
+  Additional Validations can be used on client request with an Annotation for key and implementation added to class [Validations](https://github.com/thiagosqr/app-seed/blob/master/app-web/src/main/java/com/github/thiagosqr/conf/validation/Validations.java)
+    
+##Exception Mapping
+  Using Jersey is realy handy to map how responses should be created once exception occurs. 
+  An example is [EmptyResultDataAccessExceptionMapper](https://github.com/thiagosqr/app-seed/blob/master/app-web/src/main/java/com/github/thiagosqr/conf/mappers/EmptyResultDataAccessExceptionMapper.java) which maps 404 responses when data isn't found by Spring Data.    
