@@ -1,6 +1,6 @@
 # app-seed
- <hr>
- ##Web Application Seed development ready, using Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, Websocket, CSRF, Selenium, Jersey2, Servlet3, JBossEAP, Bootstrap, Bower, JQuery, I18n, SB Admin 2
+
+##Development ready Restful Web Application Seed. Technologies: Java8, JPA, CQRS, Restful, BDD, TDD, DDD, HTML5, Websocket, CSRF, Selenium, Jersey2, Servlet3, JBossEAP, Bootstrap, Bower, JQuery, I18n, SB Admin 2
  
  
 ##CQRS Controllers
@@ -82,3 +82,6 @@
 ##Exception Mapping
   Using Jersey is realy handy to map how responses should be created once exception occurs. 
   An example is [EmptyResultDataAccessExceptionMapper](https://github.com/thiagosqr/app-seed/blob/master/app-web/src/main/java/com/github/thiagosqr/conf/mappers/EmptyResultDataAccessExceptionMapper.java) which maps 404 responses when data isn't found by Spring Data.    
+
+###What isn't covered?
+ Authentication and authorization.
