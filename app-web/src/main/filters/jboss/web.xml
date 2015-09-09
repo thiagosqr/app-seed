@@ -69,7 +69,7 @@
 
     <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
-      <param-value>gov.goias.sistema.controllers</param-value>
+      <param-value>com.github.thiagosqr.controllers</param-value>
     </init-param>
 
     <init-param>
