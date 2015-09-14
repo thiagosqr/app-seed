@@ -43,7 +43,7 @@
   From OWASP ony CSFR protection was added but future version of this template will implement other security protections. 
   However most of OWASP Top 10 critical web application security flaws are covered using Spring Security, Spring Data, Jersey and OWASP CSRFGuard 3
  
-##OWASP CSRFGuard 3 integration with Thymleaf
+##OWASP CSRFGuard 3 integration with Thymeleaf
  OWASP CSRFGuard 3 does not support Thymeleaf so an integration had to be made using [CsrfLink](https://github.com/thiagosqr/app-seed/blob/master/app-web/src/main/java/com/github/thiagosqr/conf/security/CsrfLink.java) class. 
  
  Eg. 
