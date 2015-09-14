@@ -40,7 +40,7 @@
  
 ##Security: CSFR
  Instead of using Spring Security which if a full stack security framework we decided to go with something lighter like OWASP Security Suite.
-  From OWASP ony CSFR protection was added but future version of this template will implement other security protections. 
+  From OWASP only CSFR protection was added but future version of this template will implement other security protections. 
   However most of OWASP Top 10 critical web application security flaws are covered using Spring Security, Spring Data, Jersey and OWASP CSRFGuard 3
  
 ##OWASP CSRFGuard 3 integration with Thymeleaf
@@ -55,7 +55,7 @@
  Example in [WebsocketController](https://github.com/thiagosqr/app-seed/blob/master/app-web/src/main/java/com/github/thiagosqr/controllers/WebsocketController.java) class.
  
 ##Bower 
- Bower is the de facto package manager for web technologies. Plugins used like  eonasdan-bootstrap-datetimepicker, atmosphere.js all had package conflict resolved by bower.
+ Bower is the de facto package manager for web technologies. Plugins used like  eonasdan-bootstrap-datetimepicker, atmosphere.js all had package conflicts resolved by bower.
  
 ##Testing
  
@@ -66,7 +66,7 @@
    
 ###Testing during Maven build cycle
   We use surefile maven plugin in order to run unit,functional and integration tests during a maven build.
-  The plugins star jetty, run h2, apply DDL, start the app, start browser and automatically test a feature to generate test results.
+  The plugins starts jetty, run h2, apply DDL, start the app, start browser and automatically test a feature to generate test results.
   The whole thing is done using random ports to make it easy running on Jenkins/Hudson CI.
   To run integration tests run:
    ```
