@@ -28,7 +28,7 @@
 ##Thymeleaf
  Thymeleaf was the rendering framework of choice once is well documented, uses HTML markup instead of 
  scriptlets and has a great integration with Spring. 
- By the time of building this template Jersey2 and Thymeleaf woulndn't go well toghether out of the box, so some integration had to be made.
+ By the time of building this template Jersey2 and Thymeleaf wouldn't go well together out of the box, so some integration had to be made.
  Class [ThymeleafViewProcessor](https://github.com/thiagosqr/app-seed/blob/master/app-web/src/main/java/com/github/thiagosqr/conf/ThymeleafViewProcessor.java) shows this integration
  
 ##SB Admin 2
